@@ -1,0 +1,37 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Sarina&display=swap');
+
+
+:root {
+    /* zmienne definiujące główną paletę kolorów */
+    --primary-800: #004b23ff;
+    --primary-700: #006400ff;
+    --primary-600: #007200ff;
+    --primary-500: #008000ff;
+    --primary-400: #38b000ff;
+    --primary-300: #70e000ff;
+    --primary-200: #9ef01aff;
+    --primary-100: #ccff33ff;
+    /* zmienne dla kolorów konkretnych elementów strony */
+    --bodyColor: var(--primary-800);
+    --backgroundColor: var(--primary-300);
+    /* zmienne dla czcionek */
+    --bodyFont: "Playfair Display", serif;
+    --headerFont: "Patrick Hand", cursive;
+    --specialFont: "Sarina", cursive;
+}
+
+body 
+{
+    color: var(--bodyColor);
+    background-color: var(--backgroundColor);
+    font-family: var(--bodyFont);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--headerFont);
+}
+
+.special-font
+{
+    font-family: var(--specialFont);
+}

@@ -1,0 +1,35 @@
+﻿
+
+<html>
+<head>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link href="~/css/portfolio.css" rel="stylesheet" />
+</head>
+<body>
+
+	<nav class="navbar">
+		<div class="nav-center">
+			<div class="nav-header">
+				<a asp-controller="Home" asp-action="Index">
+					<img width="100px" src="~/assets/nadine-e-icxpxfblvlg-unsplash.jpg" />
+				</a>
+				<button type="button" class="nav-btn btn">
+					<i class="fa-solid fa-bars"></i>
+				</button>
+			</div>
+			<div class="nav-links">
+				<a asp-controller="Home" asp-action="StaticSites" asp-route-name="Omnie" class="nav-link">O mnie</a>
+				<a asp-controller="Home" asp-action="StaticSites" asp-route-name="CV" class="nav-link">Curriculum Vitae</a>
+				<a asp-controller="Home" asp-action="StaticSites" asp-route-name="Projekty"  class="nav-link">Projekty</a>
+				<div class="nav-link contact-link">
+					<a asp-controller="Home" asp-action="StaticSites" asp-route-name="Kontakt"  class="btn">Kontakt</a>
+				</div>
+			</div>
+		</div>
+	</nav>
+
+	@RenderBody()
+
+	<i style="color: violet; font-size: 60px;" class="fa-solid fa-hippo"></i>
+</body>
+</html>

@@ -18,9 +18,9 @@ namespace ProjektPortfolio_sr1630.Controllers
 			return View();
 		}
 
-		public IActionResult Privacy()
+		public IActionResult StaticSites(string name)
 		{
-			return View();
+			return View(name);
 		}
 
 		[ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
