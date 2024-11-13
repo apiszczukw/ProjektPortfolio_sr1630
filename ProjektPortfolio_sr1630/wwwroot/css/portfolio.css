@@ -13,7 +13,7 @@
     --primary-100: #ccff33ff;
     /* zmienne dla kolorów konkretnych elementów strony */
     --bodyColor: var(--primary-800);
-    --backgroundColor: var(--primary-300);
+    --backgroundColor: var(--primary-200);
     /* zmienne dla czcionek */
     --bodyFont: "Playfair Display", serif;
     --headerFont: "Patrick Hand", cursive;
@@ -25,6 +25,7 @@ body
     color: var(--bodyColor);
     background-color: var(--backgroundColor);
     font-family: var(--bodyFont);
+    margin: 0;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -34,4 +35,77 @@ h1, h2, h3, h4, h5, h6 {
 .special-font
 {
     font-family: var(--specialFont);
+}
+
+.navbar
+{ 
+    display:flex;
+    justify-content: center;
+}
+
+.nav-center
+{
+    width: 90vw;
+}
+
+.nav-header 
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 5rem;
+}
+
+.btn
+{
+    background-color: var(--primary-500);
+    color: white;
+    cursor: pointer;
+    border: transparent;
+    padding: 0.4rem 0.75rem;
+    border-radius: 0.2rem;
+}
+
+.nav-links {
+    display: flex;
+    flex-direction: column;
+    height: 0;
+    overflow: hidden;
+    transition-duration: 0.7s;
+    transition-timing-function: ease-out;
+}
+
+.show-links
+{
+    height: 370.25px;
+}
+
+.nav-header img 
+{
+    height: 5rem;
+}
+
+.nav-btn i
+{
+    font-size: 1.4rem;
+}
+
+.nav-link 
+{
+    text-align: center;
+    padding: 1.6rem 0;
+    font-size: 1.3rem;
+    color: var(--bodyColor);
+    letter-spacing: 1px;
+    border-top: 1px solid var(--primary-500);
+}
+
+.nav-link:hover 
+{
+    color: var(--primary-400);
+}
+
+.nav-links a 
+{
+    text-decoration: none;
 }

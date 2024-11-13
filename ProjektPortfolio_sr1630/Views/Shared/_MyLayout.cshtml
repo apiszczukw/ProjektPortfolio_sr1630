@@ -11,9 +11,9 @@
 		<div class="nav-center">
 			<div class="nav-header">
 				<a asp-controller="Home" asp-action="Index">
-					<img width="100px" src="~/assets/nadine-e-icxpxfblvlg-unsplash.jpg" />
+					<img src="~/assets/nadine-e-icxpxfblvlg-unsplash.jpg" />
 				</a>
-				<button type="button" class="nav-btn btn">
+				<button type="button" class="nav-btn btn" onclick="show()">
 					<i class="fa-solid fa-bars"></i>
 				</button>
 			</div>
@@ -31,5 +31,8 @@
 	@RenderBody()
 
 	<i style="color: violet; font-size: 60px;" class="fa-solid fa-hippo"></i>
+
+
+	<script src="~/js/site.js"></script>
 </body>
 </html>
