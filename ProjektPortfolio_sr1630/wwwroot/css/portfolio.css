@@ -157,7 +157,7 @@ h1, h2, h3, h4, h5, h6 {
     width: 90vw;
     max-width: 1280px;
     margin: 0 auto;
-    height: calc(100vh - 5rem - 3.5rem);
+    min-height: calc(100vh - 5rem - 3.5rem);
 }
 
 .page-footer
@@ -203,3 +203,138 @@ h1, h2, h3, h4, h5, h6 {
     padding: 0.9rem;
     font-size: 0.9rem;
 }
+
+
+/* PROJEKTY */
+.projects img 
+{
+    width: 10rem;
+    height: 10rem;
+    border-radius: 7.5rem;
+    object-fit: cover;
+    margin: 1rem;
+}
+
+.projects 
+{
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    margin: 2rem 0;
+    justify-content: space-around;
+}
+
+.project 
+{
+    flex: 1;
+    padding: 0 1rem;
+    margin-top: 1rem;
+}
+
+.project b 
+{
+    margin-right: 1rem;
+}
+
+/* Strona główna */
+
+div[class|="welcome"] 
+{
+    color: var(--primary-300);
+    font-size: 2rem;
+    font-family: var(--specialFont);
+    position: relative;
+}
+
+    div[class|="welcome"]::after {
+        content: attr(data-loading-text);
+        color: var(--primary-600);
+        position: absolute;
+        left: 0;
+        overflow: hidden;
+        width: 0%;
+        animation-name: loading;
+        
+        animation-fill-mode: forwards;
+        animation-timing-function: linear;
+    }
+
+.welcome::after {
+    animation-duration: 2s;
+}
+
+.welcome-name::after {
+    animation-duration: 6s;
+    animation-delay: 2s;
+}
+
+.front-page
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 5rem - 3.5rem);
+    flex-direction: column;
+}
+
+@keyframes loading 
+{
+    0% { width: 0% }
+    100% { width: 100% }
+}
+
+/* CV */
+
+.cv-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: var(--primary-300);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.cv-container header {
+    text-align: center;
+    border-bottom: 2px solid #333;
+    margin-bottom: 20px;
+}
+
+    .cv-container h1 {
+        margin: 0;
+        font-size: 2em;
+        color: #0056b3;
+    }
+
+    .cv-container p {
+        margin: 10px 0;
+        font-size: 0.9em;
+    }
+
+.cv-container section {
+    margin-bottom: 20px;
+}
+
+    .cv-container h2 {
+        font-size: 1.5em;
+        color: #0056b3;
+        border-bottom: 1px solid #ccc;
+        padding-bottom: 5px;
+        margin-bottom: 10px;
+    }
+
+.cv-container ul {
+    list-style: none;
+    padding: 0;
+}
+
+    ul li {
+        margin-bottom: 10px;
+    }
+
+.cv-container footer {
+    font-size: 0.8em;
+    color: #666;
+    text-align: center;
+    margin-top: 20px;
+}
+
