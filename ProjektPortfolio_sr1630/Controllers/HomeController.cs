@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using ProjektPortfolio_sr1630.DAL;
 using ProjektPortfolio_sr1630.Models;
 using System.Diagnostics;
 
@@ -6,11 +7,11 @@ namespace ProjektPortfolio_sr1630.Controllers
 {
 	public class HomeController : Controller
 	{
-		private readonly ILogger<HomeController> _logger;
+		ProjectsContext db;
 
-		public HomeController(ILogger<HomeController> logger)
+		public HomeController(ProjectsContext db)
 		{
-			_logger = logger;
+			this.db = db;
 		}
 
 		public IActionResult Index()
@@ -18,15 +19,18 @@ namespace ProjektPortfolio_sr1630.Controllers
 			return View();
 		}
 
+		public IActionResult Projekty()
+		{
+			ViewBag.Projekty = db.Projects.ToList();
+
+			return View(db.Projects.ToList());
+		}
+
 		public IActionResult StaticSites(string name)
 		{
 			return View(name);
 		}
 
-		[ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-		public IActionResult Error()
-		{
-			return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-		}
+		
 	}
 }
